@@ -12,7 +12,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     
 
     @IBOutlet weak var myTableView: UITableView!
-    var animals = ["Cat","Dog","Cow","Pig","Horse","Whale"]
+    var animals = ["Cat","Dog","Bird","Pig","Horse","Whale"]
     var year = ["3","5","10","2","6","3"]
     
     override func viewDidLoad() {
@@ -58,6 +58,8 @@ class ViewController: UIViewController, UITableViewDataSource {
         cell.textLabel?.text = animals[row]
         cell.detailTextLabel?.text = year[row]
         
+        //image넣기
+        cell.imageView?.image = UIImage(named: animals[row])
         return cell
     }
 }
